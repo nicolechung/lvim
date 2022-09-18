@@ -22,12 +22,12 @@ lvim.colorscheme = "onedarker"
 -- lvim.use_icons = false
 
 -- keymappings [view all the defaults by pressing <leader>Lk]
--- ==========================================================
+-- =======================================
 require("user.keybindings").setup()
 
 
 -- null_ls
--- ==========================================================
+-- =======================================
 require("user.null_ls").setup()
 require('user.which').setup();
 -- lvim.builtin.which_key.mappings["t"] = {
@@ -47,22 +47,21 @@ lvim.builtin.nvimtree.setup.renderer.icons.show.git = false
 
 
 -- lsp (language server)
--- ======================================
+-- =======================================
 require('user.lsp').setup();
 
 -- treesitter
 -- =======================================
 require('user.treesitter').setup()
 
+-- telescope
+-- =======================================
+require('user.telescope').setup();
+
 -- plugins
--- ===============================
+-- =======================================
 require('user.plugins').setup()
 
--- Telescope
-lvim.builtin.telescope.on_config_done = function(telescope)
-  pcall(telescope.load_extension, "live_grep_args")
-  -- any other extensions loading
-end
 -- Autocommands (https://neovim.io/doc/user/autocmd.html)
 -- vim.api.nvim_create_autocmd("BufEnter", {
 --   pattern = { "*.json", "*.jsonc" },
