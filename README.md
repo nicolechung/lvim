@@ -8,7 +8,7 @@ My lunarvim configuration
 # save a backup of your current config
 mv ~/.config/lvim ~/.config/lvim_backup
 # clone this code into your lunarvim config directory
-git clone hhttps://github.com/nicolechung/lvim.git ~/.config/lvim
+git clone https://github.com/nicolechung/lvim.git ~/.config/lvim
 # update lunarvim and reset the cache
 lvim +LvimUpdate +LvimCacheReset +q
 # install the plugins in this configuration
