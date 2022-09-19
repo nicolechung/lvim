@@ -11,16 +11,23 @@ My lunarvim configuration. This is mainly the default Lunarvim configuration, bu
 ## Language Support
 
 ### tailwind completion
-![tailwind completion](images/tailwind-completion.png)
+
+<img src="images/tailwind-completion.png"
+alt="tailwind completion" width="600">
 
 `Ctrl+j` and `Ctrl+k` to move up and down between suggested auto-completions.
 
 ### ember template lint
-![ember template linting](images/ember-template-lint.png)
+
+<img src="images/ember-template-lint.png"
+alt="ember template lint" width="600">
 
 ### eslint
+
 Errors are displayed in a hover box (this is easier to read than the default inline error messages):
-![eslint](images/eslint.png)
+
+<img src="images/eslint.png"
+alt="eslint" width="600">
 
 ### prettier
 Pressing `ctrl+s` will save the file and run prettier. This only works if you have a proper prettier config in your root directory.
@@ -28,7 +35,9 @@ Pressing `ctrl+s` will save the file and run prettier. This only works if you ha
 If you have an error in your prettier config (like a typo) this will silently fail.
 
 ### Code Actions Menu
-![Code actions men](images/code-actions-menu.png)
+
+<img src="images/code-actions-menu.png"
+alt="code actions menu" width="600">
 
 Pressing `Space + `` (backtick) will bring up a code actions menu.
 
