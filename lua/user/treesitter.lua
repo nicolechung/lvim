@@ -27,6 +27,13 @@ M.setup = function()
   lvim.builtin.treesitter.ignore_install = { "haskell" }
   lvim.builtin.treesitter.highlight.enabled = true
 
+  vim.api.nvim_create_autocmd("FileType", {
+    pattern = "zsh",
+    callback = function()
+      -- let treesitter use bash highlight for zsh files as well
+      require("nvim-treesitter.highlight").attach(0, "bash")
+    end,
+  })
 end
 
 return M

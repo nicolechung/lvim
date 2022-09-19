@@ -1,6 +1,5 @@
 local M = {}
 
-
 M.setup = function()
 
   -- installed language servers

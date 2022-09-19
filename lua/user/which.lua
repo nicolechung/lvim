@@ -11,6 +11,13 @@ M.setup = function()
     "SuperFind"
   }
 
+  -- jsdoc
+  lvim.builtin.which_key.mappings["D"] = {
+    "<cmd>DogeGenerate javascript<CR>",
+    "JSDoc"
+  }
+
+
 
 end
 

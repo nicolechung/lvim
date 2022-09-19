@@ -16,7 +16,7 @@ lvim.format_on_save = {
   timeout = 2000,
   filter = require("lvim.lsp.utils").format_filter,
 }
--- make this longer than the default to avoid null_ls timeout errors
+
 lvim.colorscheme = "onedarker"
 -- to disable icons and use a minimalist setup, uncomment the following
 -- lvim.use_icons = false
@@ -67,11 +67,4 @@ require('user.plugins').setup()
 --   pattern = { "*.json", "*.jsonc" },
 --   -- enable wrap mode for json files only
 --   command = "setlocal wrap",
--- })
--- vim.api.nvim_create_autocmd("FileType", {
---   pattern = "zsh",
---   callback = function()
---     -- let treesitter use bash highlight for zsh files as well
---     require("nvim-treesitter.highlight").attach(0, "bash")
---   end,
 -- })
