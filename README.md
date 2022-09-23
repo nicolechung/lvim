@@ -8,7 +8,7 @@ My lunarvim configuration. This is mainly the default Lunarvim configuration, bu
 - ember
 - react
 
-Made with help from JimSchofield / nvim.
+Made with help from https://github.com/JimSchofield/nvim.
 
 ## Language Support
 
