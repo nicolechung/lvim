@@ -22,7 +22,7 @@ Press `control + j` and `control + k` to cycle through tailwind classes and type
 
 <img src="images/code_actions.gif" alt="code actions demo" />
 
-Press `<space> + \`` to activate the Code Actions Menu. Press a number to select the code fix.
+Press `space + \` ` to activate the Code Actions Menu. Press a number to select the code fix.
 
 Press `control + s` to save and auto format.
 
