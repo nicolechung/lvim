@@ -16,6 +16,10 @@ M.setup = function()
   -- make the current tab wider or narrower
   lvim.keys.normal_mode["<C-p>"] = ":vertical resize -2<CR>"
   lvim.keys.normal_mode["<C-o>"] = ":vertical resize +2<CR>"
+
+  vim.cmd [[
+    let g:user_emmet_leader_key='<C-z>'
+  ]]
 end
 
 return M
