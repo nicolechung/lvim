@@ -17,9 +17,11 @@ M.setup = function()
   lvim.keys.normal_mode["<C-p>"] = ":vertical resize -2<CR>"
   lvim.keys.normal_mode["<C-o>"] = ":vertical resize +2<CR>"
 
+  -- map emmet to control+z (easier to reach)
   vim.cmd [[
     let g:user_emmet_leader_key='<C-z>'
   ]]
+
 end
 
 return M

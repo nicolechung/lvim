@@ -10,37 +10,11 @@ My lunarvim configuration. This is mainly the default Lunarvim configuration, bu
 
 ## Language Support
 
-### tailwind completion
+## React, tailwind, typescript
 
-<img src="images/tailwind-completion.png"
-alt="tailwind completion" width="600">
+<img src="images/react_demo.gif" alt="react demo" />
 
-`Ctrl+j` and `Ctrl+k` to move up and down between suggested auto-completions.
-
-### ember template lint
-
-<img src="images/ember-template-lint.png"
-alt="ember template lint" width="600">
-
-### eslint
-
-Errors are displayed in a hover box (this is easier to read than the default inline error messages):
-
-<img src="images/eslint.png"
-alt="eslint" width="600">
-
-### prettier
-Pressing `ctrl+s` will save the file and run prettier. This only works if you have a proper prettier config in your root directory.
-
-If you have an error in your prettier config (like a typo) this will silently fail.
-
-### Code Actions Menu
-
-<img src="images/code-actions-menu.png"
-alt="code actions menu" width="600">
-
-Pressing `Space + `` (backtick) will bring up a code actions menu.
-
+Press `control + j` and `control + k` to cycle through tailwind classes and typescript autocompletion.
 
 ## Trying it out
 
