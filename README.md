@@ -8,13 +8,23 @@ My lunarvim configuration. This is mainly the default Lunarvim configuration, bu
 - ember
 - react
 
+Made with help from JimSchofield / nvim.
+
 ## Language Support
 
-## React, tailwind, typescript
+## tailwind, typescript
 
 <img src="images/react_demo.gif" alt="react demo" />
 
 Press `control + j` and `control + k` to cycle through tailwind classes and typescript autocompletion.
+
+## react
+
+<img src="images/react_demo.gif" alt="react demo" />
+
+Press `<space> + \`` to activate the Code Actions Menu. Press a number to select the code fix.
+
+Press `control + s` to save and auto format.
 
 ## Trying it out
 
