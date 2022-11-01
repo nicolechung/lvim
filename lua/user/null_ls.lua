@@ -2,23 +2,35 @@ local M = {}
 
 M.setup = function()
 
-  local formatters = require "lvim.lsp.null-ls.formatters"
-  formatters.setup {
-    {
-      command = "prettier",
-    },
-  }
-
-  -- local code_actions = require "lvim.lsp.null-ls.code_actions"
-  -- code_actions.setup {
+  -- local formatters = require "lvim.lsp.null-ls.formatters"
+  -- formatters.setup {
+  --   -- {
+  --   --   command = "prettier",
+  --   -- },
   --   {
   --     command = "eslint",
+  --     extra_args = { "--quiet" },
+  --     filetypes = { "javascript", "typescript", "handlebars", "hbs" }
   --   },
+  --   {
+  --     command = "stylelint"
+  --   }
   -- }
-  -- -- set additional linters
+
+  local code_actions = require "lvim.lsp.null-ls.code_actions"
+  code_actions.setup {
+    {
+      command = "eslint",
+      filetypes = { "javascript", "typescript", "handlebars", "hbs" },
+    },
+  }
+  -- set additional linters
   local linters = require "lvim.lsp.null-ls.linters"
   linters.setup {
-    { command = "eslint" }
+    {
+      command = "eslint",
+      filetypes = { "javascript", "typescript", "handlebars", "hbs" },
+    }
   }
 end
 

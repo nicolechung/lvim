@@ -10,13 +10,18 @@ an executable
 
 -- general
 lvim.log.level = "warn"
-lvim.format_on_save = {
-  pattern = "*",
-  -- avoid null_ls timeouts
-  timeout = 2000,
-  filter = require("lvim.lsp.utils").format_filter,
-}
+-- lvim.format_on_save = {
+--   pattern = "*",
+--   -- avoid null_ls timeouts
+--   timeout = 5000,
+--   filter = require("lvim.lsp.utils").format_filter,
+-- }
 
+-- lvim.format_on_save = true
+-- work specific
+
+lvim.builtin.project.patterns = { ".git", "falcon-console" }
+-- end work specific
 lvim.colorscheme = "onedarker"
 -- to disable icons and use a minimalist setup, uncomment the following
 -- lvim.use_icons = false
