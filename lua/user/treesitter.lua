@@ -28,7 +28,7 @@ M.setup = function()
   lvim.builtin.treesitter.highlight.enabled = true
 
   vim.api.nvim_create_autocmd("FileType", {
-    pattern = "zsh",
+    pattern = { "zsh", "aliases" },
     callback = function()
       -- let treesitter use bash highlight for zsh files as well
       require("nvim-treesitter.highlight").attach(0, "bash")

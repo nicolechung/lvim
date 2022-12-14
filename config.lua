@@ -10,16 +10,14 @@ an executable
 
 -- general
 lvim.log.level = "warn"
--- lvim.format_on_save = {
---   pattern = "*",
---   -- avoid null_ls timeouts
---   timeout = 5000,
---   filter = require("lvim.lsp.utils").format_filter,
--- }
+lvim.format_on_save = {
+  pattern = "*",
+  -- avoid null_ls timeouts
+  timeout = 5000,
+  filter = require("lvim.lsp.utils").format_filter,
+}
 
--- lvim.format_on_save = true
--- work specific
-
+-- lvim.format_on_save = false
 lvim.builtin.project.patterns = { ".git", "falcon-console" }
 -- end work specific
 lvim.colorscheme = "onedarker"

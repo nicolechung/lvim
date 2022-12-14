@@ -17,9 +17,12 @@ M.setup = function()
   lvim.keys.normal_mode["<C-p>"] = ":vertical resize -2<CR>"
   lvim.keys.normal_mode["<C-o>"] = ":vertical resize +2<CR>"
 
+  lvim.keys.normal_mode["<S-l>"] = ":BufferLineCycleNext<CR>"
+  lvim.keys.normal_mode["<S-h>"] = ":BufferLineCyclePrev<CR>"
   -- map emmet to control+z (easier to reach)
   vim.cmd [[
     let g:user_emmet_leader_key='<C-z>'
+    let g:ctrlsf_default_view_mode = 'compact'
   ]]
 
 end

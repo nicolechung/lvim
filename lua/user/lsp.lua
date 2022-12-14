@@ -21,17 +21,17 @@ M.setup = function()
     "bash",
   }
 
-  require 'lspconfig'.eslint.setup {
-    cmd = { "vscode-eslint-language-server", "--stdio", "--fix" },
-    filetypes = {
-      "javascript", "javascriptreact", "javascript.jsx", "typescript", "typescriptreact", "typescript.tsx", "vue",
-      "svelte", "astro", "handlebars", "hbs"
-    },
-    codeActionOnSave = {
-      enable = true,
-      mode = "all"
-    }
-  }
+  -- require 'lspconfig'.eslint.setup {
+  --   cmd = { "vscode-eslint-language-server", "--fix" },
+  --   filetypes = {
+  --     "javascript", "javascriptreact", "javascript.jsx", "typescript", "typescriptreact", "typescript.tsx", "vue",
+  --     "svelte", "astro", "handlebars", "hbs"
+  --   },
+  --   codeActionOnSave = {
+  --     enable = true,
+  --     mode = "all"
+  --   }
+  -- }
 
   -- vim.cmd [[autocmd BufWritePre <buffer> lua vim.lsp.buf.formatting_sync()]]
   -- https://www.reddit.com/r/neovim/comments/oiyrvp/is_there_a_way_to_make_lsp_inline_diagnostic/
@@ -53,6 +53,13 @@ M.setup = function()
 
     -- turn off typescript language server for formatting
     if client.name == 'tsserver' then
+      -- HACK: neovim 0.8 change client_capabilities => server_capabilities
+      client.resolved_capabilities.document_formatting = false
+      client.resolved_capabilities.document_range_formatting = false
+    end
+
+    -- turn off prettier for formatting (formatting is eslint for me)
+    if client.name == 'prettier' then
       -- HACK: neovim 0.8 change client_capabilities => server_capabilities
       client.resolved_capabilities.document_formatting = false
       client.resolved_capabilities.document_range_formatting = false
