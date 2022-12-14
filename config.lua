@@ -21,6 +21,7 @@ lvim.format_on_save = {
 lvim.builtin.project.patterns = { ".git", "falcon-console" }
 -- end work specific
 lvim.colorscheme = "onedarker"
+vim.opt.timeoutlen = 100;
 -- to disable icons and use a minimalist setup, uncomment the following
 -- lvim.use_icons = false
 
