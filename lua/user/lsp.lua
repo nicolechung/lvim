@@ -4,39 +4,18 @@ M.setup = function()
 
   -- installed language servers
   lvim.lsp.installer.setup.ensure_installed = {
-    "sumeko_lua",
     "jsonls",
     "ember",
-    "ember-language-server",
-    "eslint-lsp",
-    "javascript",
-    "typescript",
-    "typescriptreact",
     "tailwindcss",
-    "glint-language-server",
     "glint",
     "cssls",
-    "yaml",
-    "stylelint",
-    "bash",
+    "svelte",
   }
-
-  -- require 'lspconfig'.eslint.setup {
-  --   cmd = { "vscode-eslint-language-server", "--fix" },
-  --   filetypes = {
-  --     "javascript", "javascriptreact", "javascript.jsx", "typescript", "typescriptreact", "typescript.tsx", "vue",
-  --     "svelte", "astro", "handlebars", "hbs"
-  --   },
-  --   codeActionOnSave = {
-  --     enable = true,
-  --     mode = "all"
-  --   }
-  -- }
 
   -- vim.cmd [[autocmd BufWritePre <buffer> lua vim.lsp.buf.formatting_sync()]]
   -- https://www.reddit.com/r/neovim/comments/oiyrvp/is_there_a_way_to_make_lsp_inline_diagnostic/
   lvim.lsp.on_attach_callback = function(client, bufnr)
-    vim.api.nvim_create_autocmd("CursorHold", {
+    vim.api.nvim_create_autocmd({"CursorHold"}, {
       buffer = bufnr,
       callback = function()
         local opts = {

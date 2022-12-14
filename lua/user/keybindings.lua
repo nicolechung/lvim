@@ -10,9 +10,11 @@ M.setup = function()
   -- A - alt
   -- MAC command key: don't try to use
 
+  -- insert to normal mode
+  lvim.keys.insert_mode["<j-k>"] = "<Esc>";
   -- save file
   lvim.keys.normal_mode["<C-s>"] = ":w<cr>"
-
+ 
   -- make the current tab wider or narrower
   lvim.keys.normal_mode["<C-p>"] = ":vertical resize -2<CR>"
   lvim.keys.normal_mode["<C-o>"] = ":vertical resize +2<CR>"
