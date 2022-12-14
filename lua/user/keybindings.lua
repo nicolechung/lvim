@@ -11,7 +11,7 @@ M.setup = function()
   -- MAC command key: don't try to use
 
   -- insert to normal mode
-  lvim.keys.insert_mode["<j-k>"] = "<Esc>";
+  lvim.keys.insert_mode["jj"] = "<Esc>";
   -- save file
   lvim.keys.normal_mode["<C-s>"] = ":w<cr>"
  
