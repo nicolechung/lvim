@@ -10,17 +10,12 @@ an executable
 
 -- general
 lvim.log.level = "warn"
-lvim.format_on_save = {
-  pattern = "*",
-  -- avoid null_ls timeouts
-  timeout = 5000,
-  filter = require("lvim.lsp.utils").format_filter,
-}
+lvim.format_on_save = false
 
 -- lvim.format_on_save = false
 lvim.builtin.project.patterns = { ".git", "falcon-console" }
 -- end work specific
-lvim.colorscheme = "onedarker"
+lvim.colorscheme = "tokyonight-storm"
 vim.opt.timeoutlen = 300;
 -- to disable icons and use a minimalist setup, uncomment the following
 -- lvim.use_icons = false
@@ -33,6 +28,7 @@ require("user.keybindings").setup()
 -- null_ls
 -- =======================================
 require("user.null_ls").setup()
+
 require('user.which').setup();
 -- lvim.builtin.which_key.mappings["t"] = {
 --   name = "+Trouble",
@@ -48,11 +44,6 @@ lvim.builtin.terminal.active = true
 lvim.builtin.nvimtree.setup.view.side = "left"
 lvim.builtin.nvimtree.setup.renderer.icons.show.git = false
 
-
-  lvim.keys.insert_mode["jk"] = false;
-  lvim.keys.insert_mode["jk"] = "<Esc>";
-  lvim.keys.visual_mode["jk"] = false;
-  lvim.keys.visual_mode["jk"] = "<Esc>";
 -- lsp (language server)
 -- =======================================
 require('user.lsp').setup();

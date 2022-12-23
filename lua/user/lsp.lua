@@ -24,18 +24,25 @@ M.setup = function()
       end
     })
 
-    -- turn off typescript language server for formatting
+    -- turn eslint language server for formatting
+    if client.name == 'eslint' then
+      -- HACK: neovim 0.8 change client_capabilities => server_capabilities
+      client.server_capabilities.document_formatting = true
+      client.server_capabilities.document_range_formatting = true
+    end
+
+    -- turn off typescript language server for formatting (should always be off)
     if client.name == 'tsserver' then
       -- HACK: neovim 0.8 change client_capabilities => server_capabilities
-      client.resolved_capabilities.document_formatting = false
-      client.resolved_capabilities.document_range_formatting = false
+      client.server_capabilities.document_formatting = false
+      client.server_capabilities.document_range_formatting = false
     end
 
     -- turn off prettier for formatting (formatting is eslint for me)
     if client.name == 'prettier' then
       -- HACK: neovim 0.8 change client_capabilities => server_capabilities
-      client.resolved_capabilities.document_formatting = false
-      client.resolved_capabilities.document_range_formatting = false
+      client.server_capabilities.document_formatting = true
+      client.server_capabilities.document_range_formatting = true
     end
     -- Mappings.
     -- See `:help vim.lsp.*` for documentation on any of the below functions

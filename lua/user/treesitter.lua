@@ -34,7 +34,7 @@ M.setup = function()
     "handlebars",
     "html.handlebars"
   }
-  
+
   vim.api.nvim_create_autocmd("FileType", {
     pattern = { "zsh", "aliases" },
     callback = function()
