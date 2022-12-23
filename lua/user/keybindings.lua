@@ -11,7 +11,6 @@ M.setup = function()
   -- MAC command key: don't try to use
 
   -- insert to normal mode
-  lvim.keys.insert_mode["jj"] = "<Esc>";
   -- save file
   lvim.keys.normal_mode["<C-s>"] = ":w<cr>"
  
@@ -23,8 +22,9 @@ M.setup = function()
   lvim.keys.normal_mode["<S-h>"] = ":BufferLineCyclePrev<CR>"
   -- map emmet to control+z (easier to reach)
   vim.cmd [[
+    inoremap jk <Esc>
+    vnoremap jk <Esc>  
     let g:user_emmet_leader_key='<C-z>'
-    let g:ctrlsf_default_view_mode = 'compact'
   ]]
 
 end
