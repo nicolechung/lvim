@@ -4,18 +4,12 @@ M.setup = function()
 
   -- installed language servers
   lvim.lsp.installer.setup.ensure_installed = {
-    "jsonls",
-    "ember",
-    "tailwindcss",
-    "glint",
-    "cssls",
-    "svelte",
   }
 
   -- vim.cmd [[autocmd BufWritePre <buffer> lua vim.lsp.buf.formatting_sync()]]
   -- https://www.reddit.com/r/neovim/comments/oiyrvp/is_there_a_way_to_make_lsp_inline_diagnostic/
   lvim.lsp.on_attach_callback = function(client, bufnr)
-    vim.api.nvim_create_autocmd({"CursorHold"}, {
+    vim.api.nvim_create_autocmd({ "CursorHold" }, {
       buffer = bufnr,
       callback = function()
         local opts = {
