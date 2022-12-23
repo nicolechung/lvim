@@ -8,6 +8,7 @@ M.setup = function()
     "c",
     "css",
     "html",
+    "glimmer",
     "javascript",
     "json",
     "lua",
@@ -27,6 +28,13 @@ M.setup = function()
   lvim.builtin.treesitter.ignore_install = { "haskell" }
   lvim.builtin.treesitter.highlight.enabled = true
 
+  local parser_config = require "nvim-treesitter.parsers".get_parser_configs()
+  parser_config.glimmer.filetype = "hbs"
+  parser_config.glimmer.used_by = {
+    "handlebars",
+    "html.handlebars"
+  }
+  
   vim.api.nvim_create_autocmd("FileType", {
     pattern = { "zsh", "aliases" },
     callback = function()
